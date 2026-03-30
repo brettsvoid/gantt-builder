@@ -1,0 +1,11 @@
+[application]
+name = "gantt-builder"
+default_platform = "fullstack"
+
+[web.app]
+title = "Gantt Builder"
+
+[web.resource]
+style = []
+
+[web.resource.dev]

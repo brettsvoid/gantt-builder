@@ -1,0 +1,7 @@
+Name,Start Date,End Date,Progress,Dependencies,Color
+Project Planning,2026-04-01,2026-04-07,1.0,,#4a90d9
+Design Phase,2026-04-05,2026-04-14,0.6,Project Planning,#50c878
+Backend Development,2026-04-10,2026-04-28,0.3,Design Phase,#f5a623
+Frontend Development,2026-04-14,2026-05-05,0.1,Design Phase,#e74c3c
+Testing & QA,2026-04-28,2026-05-10,0.0,"Backend Development,Frontend Development",#9b59b6
+Deployment,2026-05-10,2026-05-14,0.0,Testing & QA,#1abc9c
