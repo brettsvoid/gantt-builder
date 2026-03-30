@@ -66,8 +66,11 @@ jobs:
       - name: Build
         run: dx build --platform desktop --release
 
+      - name: List output
+        run: Get-ChildItem -Recurse target/dx/gantt-builder/release/ | Select-Object FullName
+
       - name: Package
-        run: Compress-Archive -Path target/dx/gantt-builder/release/desktop/* -DestinationPath gantt-builder-desktop-windows.zip
+        run: Compress-Archive -Path target/dx/gantt-builder/release/windows/* -DestinationPath gantt-builder-desktop-windows.zip
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
@@ -101,7 +104,7 @@ jobs:
         run: dx build --platform desktop --release
 
       - name: Package
-        run: cd target/dx/gantt-builder/release/desktop && zip -r ../../../../../gantt-builder-desktop-macos.zip .
+        run: cd target/dx/gantt-builder/release/macos && zip -r ../../../../../gantt-builder-desktop-macos.zip .
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
@@ -138,7 +141,7 @@ jobs:
         run: dx build --platform desktop --release
 
       - name: Package
-        run: cd target/dx/gantt-builder/release/desktop && zip -r ../../../../../gantt-builder-desktop-linux.zip .
+        run: cd target/dx/gantt-builder/release/linux && zip -r ../../../../../gantt-builder-desktop-linux.zip .
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
