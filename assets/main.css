@@ -39,7 +39,7 @@ body {
 }
 
 .toolbar-btn {
-    padding: 7px 14px;
+    padding: 10px 16px;
     border: 1px solid #dcdfe6;
     border-radius: 6px;
     background: #fff;
@@ -149,7 +149,7 @@ body {
     cursor: pointer;
     font-size: 16px;
     line-height: 1;
-    padding: 2px 4px;
+    padding: 6px 8px;
     border-radius: 3px;
     opacity: 0;
     transition: opacity 0.15s;
@@ -250,6 +250,7 @@ body {
     display: flex;
     align-items: stretch;
     z-index: 2;
+    touch-action: none;
 }
 
 .task-bar {
@@ -297,7 +298,7 @@ body {
 
 /* Resize Handles */
 .resize-handle {
-    width: 6px;
+    width: 16px;
     cursor: ew-resize;
     z-index: 3;
     flex-shrink: 0;
