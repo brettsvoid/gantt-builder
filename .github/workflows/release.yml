@@ -27,7 +27,9 @@ jobs:
           restore-keys: windows-web-
 
       - name: Install dioxus-cli
-        run: cargo install cargo-binstall --locked && cargo binstall dioxus-cli --no-confirm
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: cargo install cargo-binstall --locked && cargo binstall dioxus-cli --no-confirm --force
 
       - name: Build
         run: dx build --release
@@ -61,7 +63,9 @@ jobs:
           restore-keys: windows-desktop-
 
       - name: Install dioxus-cli
-        run: cargo install cargo-binstall --locked && cargo binstall dioxus-cli --no-confirm
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: cargo install cargo-binstall --locked && cargo binstall dioxus-cli --no-confirm --force
 
       - name: Build
         run: dx build --platform desktop --release
@@ -98,7 +102,9 @@ jobs:
           restore-keys: macos-desktop-
 
       - name: Install dioxus-cli
-        run: cargo install cargo-binstall --locked && cargo binstall dioxus-cli --no-confirm
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: cargo install cargo-binstall --locked && cargo binstall dioxus-cli --no-confirm --force
 
       - name: Build
         run: dx build --platform desktop --release
@@ -135,7 +141,9 @@ jobs:
           restore-keys: linux-desktop-
 
       - name: Install dioxus-cli
-        run: cargo install cargo-binstall --locked && cargo binstall dioxus-cli --no-confirm
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: cargo install cargo-binstall --locked && cargo binstall dioxus-cli --no-confirm --force
 
       - name: Build
         run: dx build --platform desktop --release
